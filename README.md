@@ -18,7 +18,7 @@ Modern macroeconomic models are increasingly complex. To better understand econo
 
 While these models are richer and more realistic, they pose a significant computational challenge. Traditional solution methods, which often rely on creating a grid over the entire state space, suffer from the "Curse of Dimensionality": the computational and memory requirements grow exponentially with the number of state variables. This makes solving high-dimensional models practically impossible with standard techniques.
 
-To overcome these challenges, this repository implements the DeepHAM algorithm by (Han, Yang, and E, 2021), which leverages neural networks to find the model's solution. The advantages of this approach are threefold:
+To overcome these challenges, this repository implements the DeepHAM algorithm (Han, Yang, and E, 2021), which leverages neural networks to find the model's solution. The advantages of this approach are threefold:
 
 * Immunity to the Curse of Dimensionality
 
@@ -67,7 +67,7 @@ References:
 A key concern is whether we can trust the results obtained by Deep Learning, as there is little theoretical guarantee that the obtained results should converge. To address these concerns, the figure below provides a quick visual validation exercise of the DeepHAM methodology. 
 
 <p align="center">
-     <img src = https://github.com/markoirisarri/UnofficialDeepHAMPytorchImplementation/blob/main/distribution_individual_assets_validation_grid_based_DeepHAM.png  >
+     <img src = https://github.com/markoirisarri/UnofficialDeepHAMPytorchImplementation/blob/main/distribution_individual_assets_validation_grid_based_deepham.png  >
 </p>
 
 The figure shows the invariant distribution over individual assets under the traditional grid-based methods (the Maliar 2010 implementation) and the results obtained by employing the present Pytorch DeepHAM implementation. There are two key points worth stressing:
