@@ -4,7 +4,7 @@
 
 This repository contains a sample code for computing the Krusell Smith (1998) model by following the DeepHAM algorithm in Pytorch. Authorization from the original authors has been granted for this repository.
 
-This repository is built entirely on the methodology of the original authors, [link](https://yangycpku.github.io/files/DeepHAM_paper.pdf). I am NOT an author of the original paper and this is purely an implementation for educational purposes.
+This repository is built entirely on the methodology of the original authors, [Original Paper](https://yangycpku.github.io/files/DeepHAM_paper.pdf). I am NOT an author of the original paper and this is purely an implementation for educational purposes.
 
 ### Why DeepHam and Deep Learning for Macroeconomics? 
 
