@@ -41,7 +41,7 @@ Code by: Marko Irisarri (UPF (PhD) / Manchester (AP))
 Overall Structure of the code:
 
 - Model Class: contains the declaration and definition of the inputs of the model and the methods (functions) required to solve the model
-- Main(): DeepHam algorithm:
+- Main(): DeepHAM algorithm:
     - Step 1: Simulate economy given policy function guesses and obtain invariant distribution of the econmy
     - Step 2: Given the invariant distribution according to the guess on the policy functions, train the value NN via regression by drawing samples and computing the realized value over those trajectories
     - Step 3: Given the current guesses on policy functions and value function, draw samples from the ergodic distribution and train policy function NN along the simulated paths by building the computational graph and taking the derivatives w.r.t NN parameters
@@ -54,7 +54,7 @@ Overall Structure of the code:
 Overall Comments:
 
   - Keep track of VRAM consumption! Exceeding VRAM will result in either (i) abrupt execution abortion (ii) using the shared CPU-GPU memory (slow PCI-E transfers of memory).
-  - The output is quite verbose, contains: histograms for the individual distribution of assets per iteration of the DeepHam algorithm.
+  - The output is quite verbose, contains: histograms for the individual distribution of assets per iteration of the DeepHAM algorithm.
   - When working with pytorch, be extremely careful with in-place operators (=*, =+, clamp_max_, ...) as they might break the BPTT (Backpropagation-Through-Time) gradient flow!
   - Getting the right solution requires extensive testing of normalization, width and depth of NN, tuning the settings of the optimizer...
   - The Assets Policy NN employs a sigmoid output layer, which is constrained to be between 0 and 1. This will tell us the fraction of total resources that go to next period's assets and guarantees that c > 0.
@@ -1160,14 +1160,14 @@ def main():
 
             # Note that the scope of the functions is within the krusell smith class, therefore, the functions must be called within the model instance, (model.function())
 
-            print(f"Outer DeepHam iteration {step}," "Step 1: Simulating Economy - Obtain Ergodic Distribution")
+            print(f"Outer DeepHAM iteration {step}," "Step 1: Simulating Economy - Obtain Ergodic Distribution")
 
             model.initialize() # Draw shocks (idio and agg)
             model.simulation() # Given drawn shocks, simulate economy forward to recover individual and aggregate capitals
 
             ### Step 2 - Given the policy for assets NN, train the value NN ###
 
-            print(f"Outer DeepHam iteration {step},""Step 2: Train the Value Function NN")
+            print(f"Outer DeepHAM iteration {step},""Step 2: Train the Value Function NN")
 
             model.sampler_value() # Choose random periods for simulation to start value training
             model.drawShocksValue() # Draw shocks for the chosen random start points
@@ -1189,7 +1189,7 @@ def main():
             print(f"{time_value_end - time_value}")
 
             ### Step 3 - Given both current guesses on assets and value NNs, train the assets policy NN ###
-            print(f"Outer DeepHam iteration {step},""Step 3: Train the Assets Policy NN")
+            print(f"Outer DeepHAM iteration {step},""Step 3: Train the Assets Policy NN")
 
             model.sampler() # Choose random starting periods from simulation steps
             model.drawShocksFeedForward() # Simulate idio and agg shocks forward from starting points for Monte Carlo paths
