@@ -30,7 +30,8 @@ torch.set_float32_matmul_precision("high")
 
 """
 
-Pytorch implementation of the DeepHAM algorithm by Han et al. (2025) for the Krusell-Smith model (1998). The replicated configuration is "game_nn_n50.json".
+Pytorch implementation of the DeepHAM algorithm by Han, Yang, and E (2021) for the Krusell-Smith model (1998). The replicated configuration is "game_nn_n50.json".
+Please check original code at: https://github.com/frankhan91/DeepHAM
 Code by: Marko Irisarri (UPF (PhD) / Manchester (AP))
 
 """
