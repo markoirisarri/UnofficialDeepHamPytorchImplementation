@@ -1066,7 +1066,7 @@ def main():
     # Paths for saved model & results
     weights_path = "NN_weights_biases.pth" # CRITICAL NOTE: ONLY THE WEIGHTS AND BIASES ARE SAVED, NOT THE ENTIRE MODEL! IMPLICATIONS: STATE OF THE OPTIMIZER, NORMALIZATION BOUNDS NOT SAVED! DO NOT CHANGE FROM TRAINING VALUES!
     # Boolean continue training from saved weights
-    continue_training = False
+    continue_training = True
     # Decide on outer DeepHAM iterations (Obtainig the invariant distribution (step 1), training the value NN (step 2), training the assets policy NN (step 3))
     num_outer_steps = 51 # Number of outer steps (DeepHAM iterations)
 
