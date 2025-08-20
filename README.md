@@ -1,10 +1,10 @@
-# Unofficial DeepHAM (Han et al., 2025) Implementation in Pytorch (repo under construction)
+# Unofficial DeepHAM (Han, Yang, and E, 2021) Implementation in Pytorch (repo under construction)
 
 ## Description
 
 This repository contains a sample code for computing the Krusell Smith (1998) model by following the DeepHAM algorithm in Pytorch. Authorization from the original authors has been granted for this repository.
 
-This repository is built entirely on the methodology of the original authors, [Original Paper](https://yangycpku.github.io/files/DeepHAM_paper.pdf). I am NOT an author of the original paper and this is purely an implementation for educational purposes.
+This repository is built entirely on the methodology of the original authors, [Original Paper](https://yangycpku.github.io/files/DeepHAM_paper.pdf). I am NOT an author of the original paper and this is purely an implementation for educational purposes. Please check the official repo at: [Original Repository](https://github.com/frankhan91/DeepHAM).
 
 ### Why DeepHam and Deep Learning for Macroeconomics? 
 
@@ -18,7 +18,7 @@ Modern macroeconomic models are increasingly complex. To better understand econo
 
 While these models are richer and more realistic, they pose a significant computational challenge. Traditional solution methods, which often rely on creating a grid over the entire state space, suffer from the "Curse of Dimensionality": the computational and memory requirements grow exponentially with the number of state variables. This makes solving high-dimensional models practically impossible with standard techniques.
 
-To overcome these challenges, this repository implements the DeepHAM algorithm by (Han et al., 2025), which leverages neural networks to find the model's solution. The advantages of this approach are threefold:
+To overcome these challenges, this repository implements the DeepHAM algorithm by (Han, Yang, and E, 2021), which leverages neural networks to find the model's solution. The advantages of this approach are threefold:
 
 * Immunity to the Curse of Dimensionality
 
@@ -56,7 +56,7 @@ References:
 
     Cybenko, G. (1989). Approximation by superpositions of a sigmoidal function. Mathematics of control, signals and systems, 2(4), 303-314.
 
-    Han, H., & Maliar, S. (2022). DeepHAM: A deep learning approach for solving heterogeneous agent models. Journal of Monetary Economics, 127, 42-61.
+    Han, J., Yang, Y., & E, W. (2021). DeepHAM: A global solution method for heterogeneous agent models with aggregate shocks. arXiv preprint arXiv:2112.14377.
 
     Hornik, K., Stinchcombe, M., & White, H. (1989). Multilayer feedforward networks are universal approximators. Neural networks, 2(5), 359-366.
 
@@ -88,9 +88,6 @@ Main folder:
 - "distribution_individual_assets_validation_grid_based_deepham.png": Figure showing the distribution over individual assets under both methodologies.  
 
 /irf: Stores the time series of the aggregates across all simulated paths. Employed for plotting the IRFs. 
-
-
-
 
 ## Acknowledgements 
 
