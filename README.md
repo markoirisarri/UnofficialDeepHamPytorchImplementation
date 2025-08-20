@@ -87,6 +87,11 @@ Main folder:
 - "results.txt": This file containts the distribution of individual assets after 51 outer DeepHam iterations. Its purpose is to serve as a visual validation tool.
 - "distribution_individual_assets_validation_grid_based_deepham.png": Figure showing the distribution over individual assets under both methodologies.  
 
+/irf: Stores the time series of the aggregates across all simulated paths. Employed for plotting the IRFs. 
+
+
+
+
 ## Acknowledgements 
 
 * I thank Yucheng Yang for his insightful comments that have improved this repository in every respect.
