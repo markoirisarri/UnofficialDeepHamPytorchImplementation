@@ -6,7 +6,7 @@ This repository contains a sample code for computing the Krusell Smith (1998) mo
 
 This repository is built entirely on the methodology of the original authors, [Original Paper](https://yangycpku.github.io/files/DeepHAM_paper.pdf). I am NOT an author of the original paper and this is purely an implementation for educational purposes. Please check the official repo at: [Original Repository](https://github.com/frankhan91/DeepHAM).
 
-### Why DeepHam and Deep Learning for Macroeconomics? 
+### Why DeepHAM and Deep Learning for Macroeconomics? 
 
 Modern macroeconomic models are increasingly complex. To better understand economic phenomena, we build models with many state variables to account for:
 
@@ -67,10 +67,10 @@ References:
 A key concern is whether we can trust the results obtained by Deep Learning, as there is little theoretical guarantee that the obtained results should converge. To address these concerns, the figure below provides a quick visual validation exercise of the DeepHAM methodology. 
 
 <p align="center">
-     <img src = https://github.com/markoirisarri/UnofficialDeepHamPytorchImplementation/blob/main/distribution_individual_assets_validation_grid_based_deepham.png  >
+     <img src = https://github.com/markoirisarri/UnofficialDeepHAMPytorchImplementation/blob/main/distribution_individual_assets_validation_grid_based_DeepHAM.png  >
 </p>
 
-The figure shows the invariant distribution over individual assets under the traditional grid-based methods (the Maliar 2010 implementation) and the results obtained by employing the present Pytorch DeepHam implementation. There are two key points worth stressing:
+The figure shows the invariant distribution over individual assets under the traditional grid-based methods (the Maliar 2010 implementation) and the results obtained by employing the present Pytorch DeepHAM implementation. There are two key points worth stressing:
 
 *  First, the domain covered by both methodologies is similar (except at the upper tail, more details on this on the code). This suggests that the DeepHAM methodology can properly learn the true ergodic set of the model's solution.
 *  Second, we obtain close distributions under both methodologies. This is a de-facto validation exercise on the entire policy function, as it would not be possible to obtain the right invariant distribution unless the policy function is correct at every point on the state space. 
@@ -82,10 +82,10 @@ The structure of the contents is as follows:
 
 Main folder: 
 
-- "UnofficialDeepHamPytorchImplementation.py": Source file for the implementation. Further comments and indications can be found within the file. It solves for the risky-steady state and then computes the obtained Bellman Errors and computes the IRFs to a negative aggregate productivity shock.
+- "UnofficialDeepHAMPytorchImplementation.py": Source file for the implementation. Further comments and indications can be found within the file. It solves for the risky-steady state and then computes the obtained Bellman Errors and computes the IRFs to a negative aggregate productivity shock.
 - "NN_weights_biases.pth": These are the obtained weights and biases of the Policy and Value NN after 51 outer DeepHAM iterations.
-- "results.txt": This file containts the distribution of individual assets after 51 outer DeepHam iterations. Its purpose is to serve as a visual validation tool.
-- "distribution_individual_assets_validation_grid_based_deepham.png": Figure showing the distribution over individual assets under both methodologies.  
+- "results.txt": This file containts the distribution of individual assets after 51 outer DeepHAM iterations. Its purpose is to serve as a visual validation tool.
+- "distribution_individual_assets_validation_grid_based_DeepHAM.png": Figure showing the distribution over individual assets under both methodologies.  
 
 /irf: Stores the time series of the aggregates across all simulated paths. Employed for plotting the IRFs. 
 
