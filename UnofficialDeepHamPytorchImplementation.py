@@ -1018,7 +1018,7 @@ def plot_irfs():
                 where=benchmark_data!=0 # Condition to perform the division
             ) * 100
 
-            # Compute the mean and confidence intervals (5th and 95th percentiles) across paths
+            # Compute the mean across paths
             mean_irf = np.mean(all_irfs, axis=0)
 
             # Plotting
